@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         if(fila.moveToFirst()){
 
+
             binding.txtMateria.setText(fila.getString(0))
             binding.clfPrimerParcial.setText(fila.getString(1))
             binding.clfSegundoParcial.setText(fila.getString(2))
@@ -106,7 +107,7 @@ class MainActivity : AppCompatActivity() {
         val bd = admin.writableDatabase
         val actualizar = ContentValues()
 
-        actualizar.put("NombreAlumno", binding.txtNombre.text.toString())
+
         actualizar.put("NombreMateria", binding.txtMateria.text.toString())
         actualizar.put("PrimerParcial", binding.clfPrimerParcial.text.toString())
         actualizar.put("SegundoParcial", binding.clfSegundoParcial.text.toString())
