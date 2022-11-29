@@ -106,9 +106,11 @@ class MainActivity : AppCompatActivity() {
         val bd = admin.writableDatabase
         val actualizar = ContentValues()
 
+        actualizar.put("NombreAlumno", binding.txtNombre.text.toString())
         actualizar.put("NombreMateria", binding.txtMateria.text.toString())
         actualizar.put("PrimerParcial", binding.clfPrimerParcial.text.toString())
         actualizar.put("SegundoParcial", binding.clfSegundoParcial.text.toString())
+
 
         val cant = bd.update("TestAlumnos", actualizar,"NombreAlumno='${binding.txtNombre.text.toString()}'", null)
 
